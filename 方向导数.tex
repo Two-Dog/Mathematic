@@ -1,0 +1,49 @@
+% !Tex program = xelatex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[slantfont,boldfont]{xeCJK}
+\usepackage{fontspec}
+\setCJKmainfont{SimSun}
+\setmainfont{SimSun}
+\setsansfont{SimSun}
+\begin{document}
+
+\section*{方向导数（Directional Derivative）}
+方向导数描述了函数在给定方向上的变化率。对于标量场 $f(x, y, z)$，在单位向量 $\mathbf{u} = (u_1, u_2, u_3)$ 方向上的方向导数定义为：
+\[
+D_{\mathbf{u}} f = \nabla f \cdot \mathbf{u} = u_1 \frac{\partial f}{\partial x} + u_2 \frac{\partial f}{\partial y} + u_3 \frac{\partial f}{\partial z},
+\]
+其中 $\nabla f$ 是 $f$ 的梯度。
+
+\section*{梯度（Gradient）}
+梯度是标量场 $f(x, y, z)$ 的一个向量场，表示函数在各方向上变化率的最大值，其定义为：
+\[
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right).
+\]
+
+\section*{散度（Divergence）}
+散度是向量场 $\mathbf{F} = (F_1, F_2, F_3)$ 的一个标量场，表示向量场在某点的“发散程度”，其定义为：
+\[
+\nabla \cdot \mathbf{F} = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}.
+\]
+
+\section*{旋度（Curl）}
+旋度是向量场 $\mathbf{F} = (F_1, F_2, F_3)$ 的一个向量场，表示向量场的“旋转程度”，其定义为：
+\[
+\nabla \times \mathbf{F} = 
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+F_1 & F_2 & F_3
+\end{vmatrix},
+\]
+其中 $\mathbf{i}, \mathbf{j}, \mathbf{k}$ 是标准基向量，结果为：
+\[
+\nabla \times \mathbf{F} = \left( 
+\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}, 
+\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}, 
+\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}
+\right).
+\]
+
+\end{document}
